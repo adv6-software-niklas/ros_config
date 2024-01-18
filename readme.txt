@@ -1,0 +1,1 @@
+protoc --plugin=protoc-gen-grpc-java="C:\grpcJavaPlugin\protoc-gen-grpc-java-1.60.1-windows-x86_64.exe"  --java_out="./" --grpc-java_out="./" .\src\main\java\com\ros\control\proto\getter.proto

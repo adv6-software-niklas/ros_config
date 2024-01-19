@@ -67,12 +67,6 @@
 		    <artifactId>grpc-spring-boot-starter</artifactId>
 		    <version>2.15.0.RELEASE</version>
 		</dependency>
-
-		<dependency>
-			<groupId>com.ros.grpc</groupId>
-			<artifactId>control_grpc</artifactId>
-			<version>0.0.1</version>
-		</dependency>
 	</dependencies>
 
 	<build>

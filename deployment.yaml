@@ -69,3 +69,28 @@ spec:
       port: 5432
       targetPort: 5432
   type: LoadBalancer
+
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ros-config-backend-deployment-v2  # Change the name to a new one
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ros-config
+      component: backend
+  template:
+    metadata:
+      labels:
+        app: ros-config
+        component: backend
+    spec:
+      containers:
+        - name: ros-config-backend
+          image: mrneedhelp/adv6_ros_config:latest
+          ports:
+            - containerPort: 8080
+            - containerPort: 9090

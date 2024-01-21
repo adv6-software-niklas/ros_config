@@ -19,7 +19,7 @@ jobs:
     needs: Test
     steps:
       - name: Build PostgreSQL
-        run: docker run -d -e POSTGRES_USER=mysecretuser -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 postgres
+        run: docker run -d -e POSTGRES_USER=mysecretuser -e POSTGRES_PASSWORD=mysecretpassword -p 5432:5432 --name ros-config-service postgres
       - name: Wait for PostgreSQL to start
         run: sleep 5s
       - name: Check if Docker is running PostgreSQL
